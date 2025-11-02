@@ -22,7 +22,7 @@ class Solution {
             ind_height = hstack.pop();
             maxArea = Math.max(maxArea, ind_height[1] * (heights.length - ind_height[0]));
         }
-
+//test
         return maxArea;
 
     }
