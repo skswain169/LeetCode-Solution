@@ -27,12 +27,21 @@ class Solution {
             nodeMap.put(curr,copy);
             curr=curr.next;
         }
+        
+        //here simple Node traversal like above will also work
+        // nodeMap.entrySet().stream().
+        //     forEach(entry -> {
+        //              entry.getValue().next = nodeMap.get(entry.getKey().next);
+        //              entry.getValue().random = nodeMap.get(entry.getKey().random);
+        //             });
 
-        nodeMap.entrySet().stream().
-            forEach(entry -> {
-                     entry.getValue().next = nodeMap.get(entry.getKey().next);
-                     entry.getValue().random = nodeMap.get(entry.getKey().random);
-                    });
+        curr=head;
+        while(curr!=null)
+        {
+            nodeMap.get(curr).next=nodeMap.get(curr.next);
+            nodeMap.get(curr).random=nodeMap.get(curr.random);
+            curr=curr.next;
+        }
 
     return nodeMap.get(head);
 
