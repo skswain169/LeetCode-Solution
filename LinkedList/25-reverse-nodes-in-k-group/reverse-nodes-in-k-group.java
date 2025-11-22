@@ -29,7 +29,7 @@ class Solution {
 
             }
             ListNode newGrpPrev= groupPrev.next;
-            groupPrev.next=prev;
+            groupPrev.next=prev; //or kth 
             groupPrev =newGrpPrev;    
         }
 
