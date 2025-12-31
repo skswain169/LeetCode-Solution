@@ -1,6 +1,9 @@
 class Solution {
     public int findMin(int[] nums) {
 
+        /* Intuition is there will be 2 partions(sorted and unsorted),
+            considering mid as minimum, check in between the partition and update the l,r accordingly
+        */
         int l = 0, r = nums.length - 1;
 
         int result = Integer.MAX_VALUE;
