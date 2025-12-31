@@ -15,7 +15,7 @@ class Solution {
         int total = nums1.length + nums2.length;
         int half = total / 2;
 
-        while (l <= r) {
+        while (true) {
             int mid_nums1 = (l + r) / 2;
             int nums1_left = mid_nums1-1 < 0 ? Integer.MIN_VALUE : nums1[mid_nums1-1];
             int nums1_right = mid_nums1 >= nums1.length ? Integer.MAX_VALUE : nums1[mid_nums1];
@@ -37,6 +37,6 @@ class Solution {
                 l = mid_nums1 + 1;
 
         }
-    return 0.0;    
+   // return 0.0;    
     }
 }
