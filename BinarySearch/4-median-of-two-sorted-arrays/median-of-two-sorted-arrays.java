@@ -17,7 +17,8 @@ class Solution {
 
         while (true) {
             int mid_nums1 = (l + r) / 2;
-            int nums1_left = mid_nums1-1 < 0 ? Integer.MIN_VALUE : nums1[mid_nums1-1];
+            //mid_nums1 - 1 will be considered for left to correct identify the  mid index
+            int nums1_left = mid_nums1-1 < 0 ? Integer.MIN_VALUE : nums1[mid_nums1-1];  
             int nums1_right = mid_nums1 >= nums1.length ? Integer.MAX_VALUE : nums1[mid_nums1];
             int nums2_pivot = half - mid_nums1; //2nd array partition index
             int nums2_left = nums2_pivot-1 < 0 ? Integer.MIN_VALUE : nums2[nums2_pivot-1];
