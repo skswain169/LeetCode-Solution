@@ -40,8 +40,6 @@ class Solution {
             r++;
 
         }
-        return s1map.equals(s2map.entrySet().stream()
-                                    .filter(e -> e.getValue() != 0)
-                                    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
+        return false;
     }
 }
